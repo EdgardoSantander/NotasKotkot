@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6D9E7">
+
+    <!-- Barra superior -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#575A6A">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-black"
+            android:padding="16dp"
+            android:text="NOTAS"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="7dp"
+            android:contentDescription="Regresar"
+            app:backgroundTint="#0FE64C"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <ImageButton
+            android:id="@+id/borrar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="borrar"
+            app:srcCompat="@drawable/baseline_delete_24"
+            app:tint="#FFFFFF" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/tituloNota"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="  Título"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.116"
+            tools:layout_editor_absoluteX="13dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:hint="Ingresa el texto de la nota..."
+        android:layout_width="388dp"
+        android:layout_height="432dp"
+        android:inputType="textMultiLine"
+        android:background="#A7B4B6"
+        app:layout_anchor="@+id/constraintLayout"
+        app:hintAnimationEnabled="false"
+        app:boxBackgroundMode="none"
+
+        app:layout_anchorGravity="center"
+        >
+
+
+        <EditText
+            android:id="@+id/textoEnLaNota"
+
+            android:gravity="start"
+            android:layout_width="386dp"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+
+            android:inputType="textMultiLine"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#575A6A"
+        android:text="Guardar"
+        android:textColor="@android:color/white"
+        app:layout_anchor="@+id/constraintLayout"
+        app:layout_anchorGravity="bottom|center" />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
